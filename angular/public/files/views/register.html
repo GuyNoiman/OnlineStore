@@ -1,0 +1,100 @@
+<style>
+	body {
+		background-image: url('files/asset/images/backgroundLogin2.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		/* background-size: 100% 100%; */
+		background-size: cover;
+		background-position: center;
+	}
+
+	.register-form {
+		width: 40%;
+		font-family: 'Pompiere', cursive;
+		/* font-size: 50px; */
+		line-height: 40px;
+		padding-top: 190px;
+		padding: 3em;
+		background: #F7F7F9;
+		margin: 3em auto 0;
+		border-radius: 20px;
+		position: relative;
+		text-size-adjust: 85%;
+	}
+
+	.register h1 {
+		text-align: center;
+		color: #107a65;
+		text-size-adjust: 97%;
+		padding: 10px 0 10px 0;
+		font-family: 'Pompiere', cursive;
+	}
+
+	.register-form input[type="password"],
+	.register-form input[type="email"],
+	.register-form input[type="text"] {
+		width: 100%;
+		padding: 15px;
+		border: 1px solid #dddddd;
+		margin-bottom: 15px;
+		box-sizing: border-box;
+	}
+
+	.register-form label {
+		padding: 15px;
+		margin-bottom: 15px;
+		color: #201f1f;
+		font-weight: bold;
+	}
+
+	.register-form button[type="submit"] {
+		width: 100%;
+		padding: 20px;
+		background-color: #9fa5ac;
+		border: 0;
+		background-color: #6fdbc6;
+		border-color: #07332a;
+		box-sizing: border-box;
+		border-radius: 20px;
+		cursor: pointer;
+		font-weight: bold;
+		color: #201f1f;
+		margin: 1.5em 0 0 0em
+	}
+
+	.register-form button[type="button"] {
+		width: 100%;
+		padding: 20px;
+		background-color: #9fa5ac;
+		border: 0;
+		background-color: #4fbfa8;
+		border-color: #41b39c;
+		box-sizing: border-box;
+		border-radius: 20px;
+		cursor: pointer;
+		font-weight: bold;
+		color: #201f1f;
+		margin: 1em 0 0 0em
+	}
+
+	.register-form h3{
+		/* padding: 45px; */
+		margin-top: 50px;
+		/* margin-bottom: 20px; */
+		font-family: 'Pompiere', cursive;
+		font-size: 60px;
+	}
+</style>
+<div class="register">
+	<h1>Register Form</h1>
+	<form class="register-form" action="/" id="myRegister">
+		<span id="error-message"></span>
+		<input type="text" placeholder="Full Name" ng-model="userResName" required>
+		<input type="password" placeholder="Password" ng-model="userResPassword" required>
+		<input type="password" placeholder="Password Validation" ng-model="userResPasswordRepeat" required>
+		<input type="email" placeholder="Email Address" ng-model="userResEmail" required>
+		<button type="submit" ng-click="register()"> Submit </button>
+		<!-- <br><h3>if you have already registered :</h3></br> -->
+		<button type="button" onclick="window.location='/login';">Back To Login</button>
+	</form>
+</div>

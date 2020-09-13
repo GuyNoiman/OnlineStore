@@ -1,0 +1,124 @@
+<style>
+    .divHeader {
+        margin-bottom: 15px;
+        height: 10%;
+    }
+
+    #sectionHeader {
+        z-index: 5000;
+    }
+
+    .logo {
+        width: 90px;
+        height: 75px;
+        transition: all 0.15s ease-out;
+        float: left;
+        line-height: 20px;
+        padding-right: 20px;
+    }
+
+    .container {
+        width: 100vw;
+        position: relative;
+        max-width: 100%;
+    }
+
+    .form-control {
+        left: 7%;
+        position: absolute;
+        width: 25%;
+        background: none;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        text-size-adjust: 70%;
+        cursor: pointer;
+    }
+
+
+    .nav_bar {
+        padding-top: 40px;
+        font-family: 'Pompiere', cursive;
+        color: #16b35dd8;
+        font-weight: bold;
+        text-size-adjust: 85%;
+    }
+
+    .nav_bar ul li {
+        list-style: none;
+        text-transform: uppercase;
+        float: right;
+        margin: 0 10px;
+        padding: 0 5px 5px;
+    }
+
+    .btn {
+        color: #000;
+        display: inline-block;
+        text-size-adjust: 70%;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+        font-family: 'Pompiere', cursive;
+        padding-top: 30px;
+        background-color: white;
+        margin: 15px;
+        cursor: pointer;
+    }
+
+    .btn_admin_page {
+        color: #000;
+        display: none;
+        font-size: 60px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+        font-family: 'Pompiere', cursive;
+        padding-top: 70px;
+        background-color: white;
+        margin: 30px;
+        cursor: pointer;
+    }
+
+
+
+    .logout_btn {
+        background: #237a39;
+        border-radius: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        text-size-adjust: 85%;
+        color: #fff;
+        padding: 10px 23px;
+        margin-top: 20px;
+        margin-left: 30px;
+        position: absolute;
+        left: 10px;
+        cursor: pointer;
+    }
+</style>
+
+<div id="sectionHeader" class="divHeader" dir="rtl" ng-cloak>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="header_content d-flex flex-row align-items-center justify-content-start">
+
+                    <div class="logo" ng-controller="menuBarController">
+                        <input type="image" id="image" alt="Home page" class="logo" src="files/asset/images/logo.jpg"
+                            ng-click="goTo('/product')">
+
+                    </div>
+
+                    <input type="button" ng-click="goTo('/product')" value="Home" class="btn">
+                    <input type="button" ng-click="goTo('/cart')" value="Cart" class="btn">
+                    <input type="button" ng-click="goTo('/checkout')" value="Checkout" class="btn">
+                    <input type="button" ng-click="about()" value="About" class="btn">
+                    <input type="button" ng-click="logout()" value="Logout" class="logout_btn">
+                    <input type="button" ng-click="goTo('/admin')" value="Admin Page" class="btn"
+                        ng-show="showAdminPageLink">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,151 @@
+html,body, div, a, label{
+    font-family: Hind,sans-serif;
+    /*font-family: Narkiss Block;*/
+}
+
+.web-top {
+    top: 80px;
+}
+
+.webColor-color{
+    color: #c9ad85
+}
+
+.webColor-background{
+    background-color: #c9ad85
+}
+
+
+.onlyMobile {
+    display: none;
+}
+
+/* Global */
+.section_title,
+.section_subtitle{
+    text-align: right;
+}
+
+/* Home */
+#fullScreenDiv{
+    margin-top: 60px;
+}
+
+/* About */
+.home_content_about{
+    float: right;
+}
+
+/*Gallery*/
+.home_search_container{
+    top: 0px;
+}
+
+.search_form_select {
+    /*width: 70%;*/
+    float: right;
+    background-color: white;
+}
+
+.cities_container{
+    margin-top: 115px;
+}
+
+.home_search_content {
+    border: 1px solid #36d7b0;
+}
+
+.cities {
+    padding-top: 39px;
+}
+
+.buttonBig{
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    border: 0px;
+    width: 120px;
+    height: 45px;
+    line-height: 45px;
+    outline: none !important;
+    cursor: pointer;
+    /*background: linear-gradient(to right, #487fee, #32fa95);*/
+    background: linear-gradient(to right, #af6d3e, #c6a68f);
+    text-align: center;
+    border-radius: 36px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;    
+}
+
+.buttonBig:hover{
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.25);
+}
+
+.desk{
+    display: inline;
+}
+
+.mobile{
+    display: none;
+}
+
+
+/* @font-face {
+    font-family: 'iranyekanregular';
+    src: url('iranyekanregular-webfont.eot');
+    src: url('iranyekanregular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('iranyekanregular-webfont.woff2') format('woff2'),
+        url('iranyekanregular-webfont.woff') format('woff'),
+        url('iranyekanregular-webfont.svg#iranyekanregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+
+
+
+/* @media only screen and (max-width: 1238px)
+{
+	.home{
+        height: auto;
+    }
+
+    
+    .home_search_container{
+        margin-top: 0px;
+    }
+} */
+
+
+@media only screen and (max-width: 991px)
+{
+    .desk{
+        display: none;
+    }
+    
+    .mobile{
+        display: inline;
+    }
+
+    .web-top {
+        top: 60px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 575px) {
+    .mobile{
+        display: inline;
+    }
+    
+    .footer{
+        display: inline;
+    }
+}

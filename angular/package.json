@@ -1,0 +1,25 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "this is package",
+  "main": "server.js",
+  "scripts": {
+    "test": "server.js",
+    "start": "node server.js"
+  },
+  "author": "Noa Kurman and Guy Noiman",
+  "license": "ISC",
+  "dependencies": {
+    "angular-cookies": "1.5.8",
+    "body-parser": "^1.18.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "moment": "^2.27.0",
+    "nodemon": "^2.0.4",
+    "redis": "^3.0.2",
+    "uuid-random": "^1.3.2"
+  },
+  "devDependencies": {
+    "chrome-driver-standalone": "^2.37.0"
+  }
+}

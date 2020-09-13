@@ -1,0 +1,81 @@
+<style>
+    .container {
+        margin: 20px;
+        padding: 20px 40px;
+        font-family: "Verdana";
+    }
+
+    h1 {
+        text-align: center;
+        text-align: center;
+		color: #107a65;
+		text-size-adjust: 97%;
+		padding: 10px 0 10px 0;
+		font-family: 'Pompiere', cursive;
+    }
+
+    .err {
+        padding: 5px;
+        font-family: 'Pompiere', cursive;
+   
+    }
+
+
+    .table {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    th,
+    td {
+        border-bottom: 1px solid #ddd;
+        padding: 15px;
+        text-align: left;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+
+    .qty {
+        width: 60px;
+    }
+
+</style>
+
+<div header class="divHeader"></div>
+<h1 class="title"> My Cart </h1>
+
+<div class=container>
+    <span class="err" id="error-message"></span>
+    <div class="row">
+
+        <table class="table col-md-9 col-md-offset-3">
+            <tr>
+                <th>name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Count</th>
+                <th>Total</th>
+            </tr>
+            
+
+            <tr class="table" ng-repeat="item in cartProducts">
+                <td>{{ item.name }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.count }}</td>
+                <td>{{ item.count * item.price }}</td>
+                <td><button type="button" class="removeButton" ng-click="removeItemFromCart(item.id)" id="removeItem">Remove Item</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="row">
+    </div>
+</div>
+
+
+
+

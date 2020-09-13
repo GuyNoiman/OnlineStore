@@ -1,0 +1,114 @@
+<style>
+	body {
+		background-image: url('files/asset/images/backgroundLogin2.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		/* background-size: 100% 100%; */
+		background-size: cover;
+		background-position: center;
+	}
+
+
+
+	.login-form {
+		width: 40%;
+		font-family: 'Pompiere', cursive;
+		line-height: 40px;
+		padding-top: 190px;
+		padding: 3em;
+		background: #F7F7F9;
+		margin: 3em auto 0;
+		border-radius: 20px;
+		text-size-adjust: 97%;
+
+	}
+
+	.login h1 {
+		text-align: center;
+		color: #107a65;
+		text-size-adjust: 97%;
+		padding: 10px 0 10px 0;
+		font-family: 'Pompiere', cursive;
+	}
+
+	.login-form input[type="password"],
+	.login-form input[type="text"] {
+		width: 100%;
+		padding: 15px;
+		border-radius: 20px;
+		border: 1px solid #dddddd;
+		margin-bottom: 20px;
+		box-sizing: border-box;
+	}
+
+	.login-form label {
+		padding: 15px;
+		margin-bottom: 15px;
+		color: #201f1f;
+		font-weight: bold;
+	}
+
+	.login-form button[type="submit"] {
+		width: 100%;
+		padding: 12px;
+		background-color: #9fa5ac;
+		border: 0;
+		background-color: #6fdbc6;
+		border-color: #07332a;
+		box-sizing: border-box;
+		border-radius: 20px;
+		cursor: pointer;
+		font-weight: bold;
+		color: #201f1f;
+		margin: 0.5em 0 0 0em
+	}
+
+	.login-form button[type="button"] {
+		width: 100%;
+		padding: 12px;
+		background-color: #9fa5ac;
+		border: 0;
+		background-color: #4fbfa8;
+		border-color: #41b39c;
+		box-sizing: border-box;
+		border-radius: 20px;
+		cursor: pointer;
+		font-weight: bold;
+		color: #201f1f;
+		margin: 0.5em 0 0 0em
+	}
+
+
+	.login form input[type="checkbox"] {
+		width: 25px;
+		height: 25px;
+		/* position: absolute; */
+		bottom: -2px;
+		border: 2px solid #EDEDED;
+		background: #FFF;
+		position: relative;
+		padding-left: 38px !important;
+		cursor: pointer;
+	}
+
+
+	.login-form label[class="checkbox"] {
+		color: #999;
+		margin: -0.5em 0 0 0em;
+	}
+</style>
+
+<div class="login">
+	<h1>Login Form</h1>
+	<form class="login-form" id="myLogin">
+		<span id="error-message"></span>
+		<input type="text" id="useremail" placeholder="Email Address" ng-model="userlogemail" required>
+		<input type="password" id="userpassword" placeholder="Password" ng-model="userLogPassword" required>
+		<div class="check">
+			<label class="checkbox">
+				<input type="checkbox" id="remember" ng-model="remember">      Remember me</label>
+		</div>
+		<button type="submit" ng-click="login()"> Submit </button>
+		<button type="button" ng-click="moveToRegister()"> Register </button>
+	</form>
+</div>
